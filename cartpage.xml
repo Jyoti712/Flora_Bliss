@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/floraBlissText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:text="FLORAL BLISS ORDER FORM"
+            android:textColor="#4B1B33"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your Email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:importantForAutofill="yes"
+            android:drawableStart="@android:drawable/ic_menu_send"
+            android:padding="12dp" />
+
+        <!-- Name Input -->
+        <EditText
+            android:id="@+id/nameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:inputType="textPersonName"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:backgroundTint="#AA336A"
+            android:padding="12dp"
+            android:minHeight="48dp"
+            android:contentDescription="Enter your full name" />
+
+        <!-- Address Input -->
+        <EditText
+            android:id="@+id/addressInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Delivery Address"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:scrollHorizontally="false"
+            android:importantForAutofill="yes"
+            android:drawableEnd="@android:drawable/ic_menu_mapmode"
+            android:padding="12dp" />
+
+        <!-- Flower Type Dropdown -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Flower Type"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_marginTop="10dp" />
+
+        <Spinner
+            android:id="@+id/flowerSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:popupBackground="#FFDDFF"
+            android:padding="12dp"
+            android:minHeight="48dp"
+            android:layout_marginBottom="10dp"
+            android:dropDownVerticalOffset="5dp" />
+
+        <!-- Quantity Slider -->
+        <TextView
+            android:id="@+id/quantityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Quantity: 1"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#663399"
+            android:layout_marginTop="10dp" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/quantitySlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stepSize="1"
+            android:valueFrom="1"
+            android:valueTo="20"
+            android:contentDescription="Quantity selection slider, choose from 1 to 20" />
+
+        <!-- Delivery Date Picker -->
+        <Button
+            android:id="@+id/datePickerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Delivery Date"
+            android:backgroundTint="#228B22"
+            android:textColor="#FFFFFF"
+            android:paddingHorizontal="16dp"
+            android:layout_marginTop="10dp" />
+
+        <!-- Delivery Time Picker -->
+        <Button
+            android:id="@+id/timePickerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Delivery Time"
+            android:textAllCaps="false"
+            android:backgroundTint="#FFD700"
+            android:textColor="#000000"
+            android:layout_marginTop="10dp" />
+
+        <!-- Delivery Type (Radio Buttons) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Type"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#444444"
+            android:layout_marginTop="10dp" />
+
+        <RadioGroup
+            android:id="@+id/deliveryTypeGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center_horizontal">
+
+            <RadioButton
+                android:id="@+id/standardDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Standard Delivery"
+                android:textColor="#006400"
+                android:buttonTint="#006400"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/expressDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Express Delivery"
+                android:textColor="#8B0000"
+                android:buttonTint="#8B0000"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <!-- Add-ons (CheckBoxes) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add-ons"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#555555"
+            android:layout_marginTop="10dp" />
+
+        <CheckBox
+            android:id="@+id/addonChocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolates"
+            android:textColor="#964B00"
+            android:buttonTint="#964B00"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/addonCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Greeting Card"
+            android:textColor="#FF4500"
+            android:buttonTint="#FF4500"
+            android:textSize="16sp" />
+
+        <!-- Custom Message -->
+        <EditText
+            android:id="@+id/customMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Custom Message (Optional)"
+            android:inputType="textMultiLine"
+            android:maxLines="3"
+            android:gravity="start"
+            android:padding="8dp"
+            android:backgroundTint="#888888" />
+
+        <!-- Service Rating -->
+        <TextView
+            android:id="@+id/ratingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rate Our Service: 0"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#00008B"
+            android:layout_marginTop="10dp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:rating="0"
+            android:progressTint="#FFA500"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Submit Button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/submitFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_send"
+            android:contentDescription="Submit Order"
+            app:backgroundTint="#4682B4"
+            android:layout_marginTop="20dp" />
+    </LinearLayout>
+</ScrollView>
