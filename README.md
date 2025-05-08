@@ -1,2 +1,2 @@
-# Flora_Bliss
-FloraBliss is a Kotlin-based mobile app for easy flower ordering and management. It features login/registration, a home page with floral arrangements, order tracking, side and bottom navigation, a popup menu, and a music player—delivering a smooth, intuitive, and complete user experience.
+# 🌸 Flora_Bliss
+FloraBliss is a feature-rich mobile application developed using Kotlin, designed to simplify flower ordering and enhance user experience. The app offers seamless login and registration, an elegant home page showcasing a variety of floral arrangements, real-time order tracking, and smooth side and bottom navigation for intuitive browsing. It also includes a popup menu for quick actions and an integrated music player, creating a calming, engaging experience. FloraBliss combines aesthetics with functionality, making flower shopping delightful and efficient.
